@@ -43,7 +43,7 @@ const App: React.FC = () => {
     <main className="App">
       <h1>My Notes</h1>
       <AddNote saveNote={handleSaveNote} />
-      {notes &&
+      {notes?.length > 0 &&
         notes.map((note: INote) => (
           <NoteItem key={note._id} deleteNote={handleDeleteNote} note={note} />
         ))}

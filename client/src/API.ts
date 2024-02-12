@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from "axios";
 
-//const baseUrl: string = "http://localhost:3001/api";
-const baseUrl: string = "/api";
+const baseUrl: string = process.env.API_URL ?? "http://localhost:8080/api";
+// const baseUrl: string = "/api";
 
 export const getNotes = async (): Promise<AxiosResponse<ApiDataType>> => {
   try {
